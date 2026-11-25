@@ -1,0 +1,15 @@
+from pathlib import Path
+import json
+q=Path('work/v3.8')
+for name in ['template.html','cloud3d.js']:
+ p=q/name;s=p.read_text(encoding='utf8');s=s.replace('X轴为五年累计收益率，Y轴区分资产，Z轴为分箱样本比例；四种资产共享坐标与刻度。默认每1个百分点分箱。','柱高表示该收益区间的样本比例；四条资产通道共享收益率与比例刻度。默认每4个百分点分箱。');s=s.replace('四资产立体直方图：X轴累计收益率，Y轴资产类别，Z轴样本比例；方向键旋转，加减键缩放，Home复位','四资产立体直方图：累计收益率、资产名称、样本比例；方向键旋转，加减键缩放，Home复位');s=s.replace("${String(k+1).padStart(2,'0')} ${a.name}",'${a.name}');p.write_text(s,encoding='utf8')
+p=q/'template.html';s=p.read_text(encoding='utf8').replace('<option value="0.01" selected>','<option value="0.01">').replace('<option value="0.05">','<option value="0.04" selected>4 个百分点</option><option value="0.05">');start=s.index('<div id="histAxisKeys"');end=s.index('<div class="legend">',start);s=s[:start]+s[end:];p.write_text(s,encoding='utf8')
+p=q/'histogram3d.js';s=p.read_text(encoding='utf8').replace('let histBinWidth=.01','let histBinWidth=.04').replace('[.005,.01,.02,.05]','[.005,.01,.02,.04,.05]');s=s.replace(" for(let k=0;k<4;k++)histogramTick(ctx,'0'+(k+1),[-leftX,-.69,-.72+k*.48],15,0);",' histogramAssetNames(ctx,leftX);');s=s.replace("'X · 5-year return (%)':'X · 五年累计收益率（%）'","'5-year return (%)':'五年累计收益率（%）'").replace("'Z · Sample share (%)':'Z · 样本比例（%）'","'Sample share (%)':'样本比例（%）'")
+line=" histogramAligned(ctx,LANG==='en'?'Y · Asset':'Y · 资产类别',yo,ye,-37*Math.sign(py.y-pyo.y||1));"
+s=s.replace(line,'')
+s+='''
+// Full asset names replace the category codes. Leaders avoid overlap while orbiting.
+function histogramAssetNames(ctx,leftX){const c=cloudScene,font=c.w<550?9:12;ctx.font=font+'px "Lab English","Lab Sans",sans-serif';const items=ACTIVE.map((a,k)=>({k,text:translate(a.name),p:cloudProject(-leftX,-.69,-.72+k*.48)})).sort((a,b)=>a.p.y-b.p.y),spacing=font+12,maxWidth=Math.max(...items.map(a=>ctx.measureText(a.text).width)),x=Math.max(10,Math.min(c.w-maxWidth-10,Math.max(...items.map(a=>a.p.x))+18)),mid=items.reduce((sum,a)=>sum+a.p.y,0)/items.length,start=Math.max(45,Math.min(c.h-spacing*4-20,mid-spacing*1.5));items.forEach((a,i)=>{const y=start+i*spacing;ctx.strokeStyle=COLORS[a.k]+'77';ctx.lineWidth=.8;ctx.beginPath();ctx.moveTo(a.p.x,a.p.y);ctx.lineTo(x-6,y);ctx.stroke();ctx.fillStyle='#e2e8f1e6';ctx.fillRect(x-3,y-font*.7,ctx.measureText(a.text).width+6,font+5);ctx.fillStyle=COLORS[a.k];ctx.textAlign='left';ctx.textBaseline='middle';ctx.fillText(a.text,x,y)})}
+''';p.write_text(s,encoding='utf8')
+p=q/'translations.json';d=json.loads(p.read_text(encoding='utf8'));d.update({'4 个百分点':'4 pp','柱高表示该收益区间的样本比例；四条资产通道共享收益率与比例刻度。默认每4个百分点分箱。':'Height shows the sample share in each return interval. Four asset lanes share the return and frequency scales. Default bin width: 4 percentage points.','四资产立体直方图：累计收益率、资产名称、样本比例；方向键旋转，加减键缩放，Home复位':'Four-asset histogram: cumulative return, asset names and sample percentage. Arrow keys rotate, +/- zoom, Home resets.'});p.write_text(json.dumps(d,ensure_ascii=False,indent=2),encoding='utf8')
+print('Set 4 pp default, full asset names and removed letter labels / axis cards')
