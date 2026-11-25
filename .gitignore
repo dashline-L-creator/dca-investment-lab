@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+
+work/github-cli/
+work/private_github_auth/
