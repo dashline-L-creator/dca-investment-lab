@@ -1,0 +1,6 @@
+from pathlib import Path
+q=Path('work/v3.6');p=q/'cloud3d.js';s=p.read_text(encoding='utf8');start=s.index('function cloudRecords(');end=s.index('function prepareCloud(',start);s=s[:start]+s[end:];start=s.index('function paintCloud(');end=s.index('function cloudRequestPaint(',start);s=s[:start]+s[end:];s=s.replace('cloudPitch=.27','cloudPitch=.42');p.write_text(s,encoding='utf8')
+p=q/'verify_cloud.cjs';s=p.read_text(encoding='utf8');needle="console.log('PASS: spring settles"
+at=s.index(needle);s=s[:at]+'''cloudSwitch('2d');installMorphControls();let btn=$('morphHold');btn.setPointerCapture=id=>btn.capture=id;btn.hasPointerCapture=id=>btn.capture===id;btn.releasePointerCapture=()=>btn.capture=null;btn.onpointerdown({button:0,pointerId:9,preventDefault(){}});if(!morphHolding||morphAmount!==1)throw Error('Hold did not aggregate');btn.onpointerup({pointerId:9});if(morphHolding||morphAmount!==0||btn.capture!==null)throw Error('Release did not restore');btn.onkeydown({key:' ',preventDefault(){}});btn.onblur();if(morphHolding||morphAmount!==0)throw Error('Blur left morph held');cloudSwitch('3d');
+''' +s[at:];p.write_text(s,encoding='utf8')
+print('Cleaned superseded renderer; extended release and blur checks')
