@@ -1,0 +1,3 @@
+from pathlib import Path
+q=Path('work/v3.7');p=q/'markets.js';s=p.read_text(encoding='utf8');s=s.replace('function marketEscape(s)',"function marketClock(s){s=String(s);return /^\\d{14}$/.test(s)?s.slice(0,4)+'-'+s.slice(4,6)+'-'+s.slice(6,8)+' '+s.slice(8,10)+':'+s.slice(10,12)+':'+s.slice(12,14):s.replace(/\\//g,'-')}\nfunction marketEscape(s)");s=s.replace('marketEscape(a.quoteTime)','marketEscape(marketClock(a.quoteTime))');p.write_text(s,encoding='utf8')
+p=q/'template.html';s=p.read_text(encoding='utf8').replace('function setScope(s){stopTravel();','function setScope(s){histPicked=null;stopTravel();');p.write_text(s,encoding='utf8')
