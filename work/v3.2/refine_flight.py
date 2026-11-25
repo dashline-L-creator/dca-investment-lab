@@ -1,0 +1,5 @@
+from pathlib import Path
+p=Path('work/v3.2/intro.js');s=p.read_text(encoding='utf8');s=s.replace("main.inert=true;document.body.classList.add('intro-active');","main.inert=true;document.body.style.setProperty('--intro-scrollbar',Math.max(0,window.innerWidth-document.documentElement.clientWidth)+'px');document.body.classList.add('intro-active');")
+s=s.replace("dy=b.y+b.height/2-(a.y+a.height/2);if(typeof mark.animate==='function'){", "dy=b.y+b.height/2-(a.y+a.height/2);let matrix=getComputedStyle(main).transform,lift=matrix.startsWith('matrix(')?parseFloat(matrix.split(',')[5])||0:0;dy-=lift;finishTimer=setTimeout(close,800);if(typeof mark.animate==='function'){try{")
+s=s.replace("flight.finished.then(close).catch(()=>{})}finishTimer=setTimeout(close,800)","flight.finished.then(close).catch(()=>{})}catch{close()}}")
+p.write_text(s,encoding='utf8');p=Path('work/v3.2/template.html');s=p.read_text(encoding='utf8').replace('body.intro-active{overflow:hidden}','body.intro-active{overflow:hidden;padding-right:var(--intro-scrollbar,0px)}');p.write_text(s,encoding='utf8')
