@@ -1,0 +1,6 @@
+{
+  "name": "dca-investment-lab",
+  "app_version": "v3.10",
+  "research_dataset": "data/research/dca.json",
+  "offline_entry": "dist/index.html"
+}

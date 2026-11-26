@@ -3,3 +3,6 @@
 *.png binary
 *.jpg binary
 *.xlsx binary
+*.zip binary
+# Preserve reproducible offline HTML bytes on every OS.
+/dist/index.html -text whitespace=cr-at-eol

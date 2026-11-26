@@ -1,0 +1,127 @@
+{
+  "baseline": {
+    "files": 765,
+    "bytes": 75090917,
+    "commit": "f0cc89224b2e2c971a7d1403b850426680625bf0"
+  },
+  "versions": [
+    {
+      "version": "v1.0",
+      "asset": "dca-lab-v1.0.zip",
+      "sha256": "b0492546a94b890c42f3eb76de05c240654408aa32cb02fbc04563f28a424cba",
+      "bytes": 3350484,
+      "files": 21
+    },
+    {
+      "version": "v2.0",
+      "asset": "dca-lab-v2.0.zip",
+      "sha256": "4b70fa401bb2659f84d6760ced1a0272110edd510c57c4c3dcb7bfb52cfeac74",
+      "bytes": 757857,
+      "files": 8
+    },
+    {
+      "version": "v2.1",
+      "asset": "dca-lab-v2.1.zip",
+      "sha256": "e4596822593dc0330c29da48451acb66f508f087969cfd1a4d507111975f7486",
+      "bytes": 609901,
+      "files": 5
+    },
+    {
+      "version": "v3.0",
+      "asset": "dca-lab-v3.0.zip",
+      "sha256": "058a83f837c793a440812383da0add34e56307e6808532497d63736bc728b348",
+      "bytes": 655438,
+      "files": 6
+    },
+    {
+      "version": "v3.1",
+      "asset": "dca-lab-v3.1.zip",
+      "sha256": "097ee94b5f696bc0662b24c8cfa3f37c2786fda09a0be668b2ae03b40297d906",
+      "bytes": 635481,
+      "files": 6
+    },
+    {
+      "version": "v3.10",
+      "asset": "dca-lab-v3.10.zip",
+      "sha256": "f1e9f28d7f19f51bfaff7d5746c89607b3eb392bfee3416cf5fa4f6eed829db9",
+      "bytes": 1120940,
+      "files": 11
+    },
+    {
+      "version": "v3.2",
+      "asset": "dca-lab-v3.2.zip",
+      "sha256": "53b5f876a2e76cad41f9c874a10aea6b1e3d929bd2c58f76ce6e783437781a1d",
+      "bytes": 560256,
+      "files": 7
+    },
+    {
+      "version": "v3.3",
+      "asset": "dca-lab-v3.3.zip",
+      "sha256": "580fc2d4fd60736560d8ab195a6295dd779cda544ec01e170650f2c497b6383e",
+      "bytes": 774901,
+      "files": 7
+    },
+    {
+      "version": "v3.3.1",
+      "asset": "dca-lab-v3.3.1.zip",
+      "sha256": "138628bca3d1bbe4e4566c51e3abf1b4c63a16e4b1a4739832e0691a3f4f1d70",
+      "bytes": 613847,
+      "files": 6
+    },
+    {
+      "version": "v3.4",
+      "asset": "dca-lab-v3.4.zip",
+      "sha256": "2fd465dd7f69adaf4595254778dc115fc9be16fdcb1d5b749eda3c022961dcc3",
+      "bytes": 1522168,
+      "files": 14
+    },
+    {
+      "version": "v3.5",
+      "asset": "dca-lab-v3.5.zip",
+      "sha256": "86104aab4e2949678a0b6a2d28c150e5df992b958aff41a45f5e8ff296f6dda5",
+      "bytes": 1635815,
+      "files": 12
+    },
+    {
+      "version": "v3.6",
+      "asset": "dca-lab-v3.6.zip",
+      "sha256": "2725d31bfae15eaff7ddc23dc7d7e6dff8755a71a47aa5bcec571d4fb865ef68",
+      "bytes": 1008583,
+      "files": 8
+    },
+    {
+      "version": "v3.7",
+      "asset": "dca-lab-v3.7.zip",
+      "sha256": "e56d6a30ac84716353460a22ca8cebb1d4be1441afc319e033ea7b394d38bb50",
+      "bytes": 1124822,
+      "files": 11
+    },
+    {
+      "version": "v3.8",
+      "asset": "dca-lab-v3.8.zip",
+      "sha256": "c7f290354d2d3106ba8ee20677209a61d099fe80b9c26456c75ad1c4fe92ea26",
+      "bytes": 1219779,
+      "files": 11
+    },
+    {
+      "version": "v3.9",
+      "asset": "dca-lab-v3.9.zip",
+      "sha256": "0ca373594232b5da6b63bbcb513cd397f678f212b8a9191ea3e85c96064a03b6",
+      "bytes": 1253823,
+      "files": 13
+    },
+    {
+      "version": "v3.9.1",
+      "asset": "dca-lab-v3.9.1.zip",
+      "sha256": "3abe66b0a85a53ed6918337bcf72e34fe6a6b702206bcd714a71fa123bc883de",
+      "bytes": 1215254,
+      "files": 12
+    }
+  ],
+  "research_archive": {
+    "asset": "research-and-build-history-v3.10.zip",
+    "sha256": "87c803aa3c8b536a93bf7fabb720dd45c9efc48b56b2e1435edcaa39443a1785",
+    "bytes": 8933887
+  },
+  "note": "Published assets preserve frozen tagged outputs. No Git history rewrite. Local legacy folders retained but ignored."
+}

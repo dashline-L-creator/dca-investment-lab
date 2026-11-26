@@ -1,2 +1,0 @@
-from pathlib import Path
-q=Path('work/v3.7');p=q/'markets.js';s=p.read_text(encoding='utf8').replace('h-ph-34','(h>850?h-ph-34:22)').replace('${a.quoteTime}','${marketEscape(a.quoteTime)}');s=s.replace('new MutationObserver(marketRender).observe(document.documentElement','let lastMarketLang=LANG;new MutationObserver(()=>{if(lastMarketLang!==LANG){lastMarketLang=LANG;marketRender()}}).observe(document.documentElement');p.write_text(s,encoding='utf8')
