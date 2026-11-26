@@ -6,7 +6,7 @@
  const scanner=$('thresholdSlider').closest('.panel');group([scanner.querySelector('.chart-head p'),scanner.querySelector('.footnote')]);
  for(const e of [...document.querySelectorAll('.panel>.footnote')])if(!e.closest('details'))group([e]);
  const stats=$('statsTable').closest('.panel');group([stats.querySelector(':scope>p.tiny')]);
- const release=document.createElement('span');release.className='release-badge';release.textContent='v3.10';document.querySelector('header .brand').append(release);
+ const release=document.createElement('span');release.className='release-badge';release.textContent='v3.10.1';document.querySelector('header .brand').append(release);
  function cardDetails(){for(const card of $('cards').children){let details=card.querySelector('.card-details');if(!details){details=document.createElement('details');details.className='card-details';card.append(details)}const opened=details.open,code=card.querySelector(':scope>.code'),note=card.querySelector(':scope>.tiny');details.innerHTML='<summary>'+(LANG==='en'?'Details':'详情')+'</summary><div>'+(code?.outerHTML||'')+(note?.outerHTML||'')+'</div>';details.open=opened}}
  new MutationObserver(cardDetails).observe($('cards'),{childList:true});cardDetails();
  new MutationObserver(()=>{document.querySelectorAll('[data-note-label]').forEach(e=>e.textContent=LANG==='en'?'Chart notes':'图表说明');cardDetails()}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});

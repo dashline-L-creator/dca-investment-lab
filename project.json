@@ -1,6 +1,7 @@
 {
   "name": "dca-investment-lab",
-  "app_version": "v3.10",
+  "app_version": "v3.10.1",
   "research_dataset": "data/research/dca.json",
-  "offline_entry": "dist/index.html"
+  "offline_entry": "dist/index.html",
+  "site_url": "https://dashline-l-creator.github.io/dca-investment-lab/"
 }

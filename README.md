@@ -1,14 +1,19 @@
 # 时间的复利 · 定投交互实验室
 
+## [打开最新网页 →](https://dashline-l-creator.github.io/dca-investment-lab/)
+
+在线地址固定，电脑和手机均可直接访问，无需下载。
+
 <img src="assets/brand/logo.svg" width="64" alt="时间的复利 Logo">
 
 比较每天投入 **50元人民币、持续五年**的历史结果。七种资产中自选四种，观察不同起投日的收益、分布与达标比例。支持中英文、手机/平板/电脑、时间旅行与三维图表。
 
-**当前网页版本：v3.10** · [下载离线网页](https://github.com/dashline-L-creator/dca-investment-lab/releases/download/v3.10/dca-lab-v3.10.zip) · [全部历史版本](https://github.com/dashline-L-creator/dca-investment-lab/releases) · [研究口径](docs/研究口径.md) · [开发说明](docs/开发与维护.md)
+**当前网页版本：v3.10.1** · [在线打开](https://dashline-l-creator.github.io/dca-investment-lab/) · [下载离线网页](https://github.com/dashline-L-creator/dca-investment-lab/releases/download/v3.10.1/dca-lab-v3.10.1.zip) · [全部历史版本](https://github.com/dashline-L-creator/dca-investment-lab/releases) · [研究口径](docs/研究口径.md) · [开发说明](docs/开发与维护.md)
 
 ## 使用
 
-- **只看网页**：下载离线包，解压后打开 `outputs/v3.10/定投交互实验室_v3.10.html`。字体、研究数据和图表均已内置。
+- **在线使用**：点击上面的“打开最新网页”，也可从仓库右侧 About 的网站链接进入。
+- **离线使用**：下载离线包，解压后打开 `index.html`。字体、研究数据和图表均已内置。
 - **下载整个仓库**：直接打开 [`dist/index.html`](dist/index.html)，无需安装依赖。
 - **历史版本**：在 Releases 选择版本，下载 `dca-lab-版本.zip`。历史源码通过同名Git标签查看。
 
@@ -66,6 +71,8 @@ python scripts/check.py
 
 ## 版本与授权
 
-旧版网页转为Releases附件，历史计算脚本与原始响应另有 [研究与构建资料包](https://github.com/dashline-L-creator/dca-investment-lab/releases/download/v3.10/research-and-build-history-v3.10.zip)。已有提交和标签保留，本次目录整理未改变 v3.10 网页内容。[归档清单与校验摘要](docs/releases.json)
+旧版网页转为Releases附件，历史计算脚本与原始响应另有 [研究与构建资料包](https://github.com/dashline-L-creator/dca-investment-lab/releases/download/v3.10/research-and-build-history-v3.10.zip)。已有提交和标签保留。[归档清单与校验摘要](docs/releases.json)
+
+v3.10.1修复二维点阵因绘图变量作用域错误而中断的问题，增加真实绘图回归检查，并启用公开GitHub Pages访问。[托管与搜索说明](docs/网页托管.md)
 
 第三方许可统一存放于 [`licenses/`](licenses/)，来源见 [第三方资源说明](docs/第三方资源.md)。本次未新增项目整体的开源许可证。

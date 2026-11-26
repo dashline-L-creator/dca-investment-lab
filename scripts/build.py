@@ -38,5 +38,11 @@ def build():
     (cache/'app.js').write_text(re.findall(r'<script>(.*?)</script>',s,re.S)[0].strip()+'\n',encoding='utf8')
     digest=hashlib.sha256((out/'index.html').read_bytes()).hexdigest()
     (out/'SHA256.json').write_text(json.dumps({'index.html':digest},indent=2)+'\n',encoding='utf8')
+    project=json.loads(read('project.json'))
+    if project.get('site_url'):
+        url=project['site_url']
+        (out/'.nojekyll').write_bytes(b'')
+        (out/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+url+'sitemap.xml\n',encoding='utf8')
+        (out/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>'+url+'</loc></url></urlset>\n',encoding='utf8')
     print('Built dist/index.html ('+str((out/'index.html').stat().st_size)+' bytes)')
 if __name__=='__main__':build()

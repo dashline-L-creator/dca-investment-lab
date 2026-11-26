@@ -1,3 +1,6 @@
+定投交互实验室 v3.10.1
+修复二维点阵绘图中断，增加真实Canvas绘制回归；网页公开托管于 https://dashline-l-creator.github.io/dca-investment-lab/ 。研究数据和口径未变。
+
 定投交互实验室 v3.10
 
 v3.10 — 2026-11-26
