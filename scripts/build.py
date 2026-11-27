@@ -23,9 +23,10 @@ def build():
         '__ELECTRIC_JS__':js('electric').replace('__OGL_MODULE_URL__','data:text/javascript;base64,'+encoded('vendor/ogl.bundle.mjs')),
         '__GOLD_JS__':js('gold')+'\n'+js('sessions'), '__GLOW_JS__':js('glow'),
         '__MARKETS_JS__':js('markets').replace('__PLAYBACK_JS__',js('playback')).replace('__MARKET_SNAPSHOT__',read('data/market/snapshot.json')),
-        '__INTRO_JS__':js('intro'), '__FIELD_JS__':js('linefield'),
+        '__INTRO_JS__':js('intro'), '__MUSIC_JS__':js('music'), '__FIELD_JS__':js('linefield'),
         '__CLOUD_JS__':js('cloud3d')+'\n'+js('histogram3d'), '__MORPH_JS__':js('morph'),
         '__ORBIT_JS__':js('orbit'), '__MOUSE_JS__':js('mouse'), '__FAVICON__':read('src/favicon.html'),
+        '__GSAP_VENDOR__':'\n'.join(read('vendor/'+n+'.min.js') for n in ['gsap','Flip','SplitText']), '__MOTION_JS__':js('motion'),
         '__CLEAN_JS__':js('clean'), '__AXIS_JS__':js('axis'),
         '__RESPONSIVE_CSS__':read('src/styles/responsive.css'), '__RESPONSIVE_JS__':js('responsive'),
     }

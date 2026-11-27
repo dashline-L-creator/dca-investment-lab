@@ -8,7 +8,7 @@
 
 比较每天投入 **50元人民币、持续五年**的历史结果。七种资产中自选四种，观察不同起投日的收益、分布与达标比例。支持中英文、手机/平板/电脑、时间旅行与三维图表。
 
-**当前网页版本：v3.10.1** · [在线打开](https://dashline-l-creator.github.io/dca-investment-lab/) · [下载离线网页](https://github.com/dashline-L-creator/dca-investment-lab/releases/download/v3.10.1/dca-lab-v3.10.1.zip) · [全部历史版本](https://github.com/dashline-L-creator/dca-investment-lab/releases) · [研究口径](docs/研究口径.md) · [开发说明](docs/开发与维护.md)
+**当前网页版本：v3.11.0** · [在线打开](https://dashline-l-creator.github.io/dca-investment-lab/) · [上一发布版离线网页](https://github.com/dashline-L-creator/dca-investment-lab/releases/download/v3.10.1/dca-lab-v3.10.1.zip) · [全部历史版本](https://github.com/dashline-L-creator/dca-investment-lab/releases) · [研究口径](docs/研究口径.md) · [开发说明](docs/开发与维护.md)
 
 ## 使用
 
@@ -76,3 +76,5 @@ python scripts/check.py
 v3.10.1修复二维点阵因绘图变量作用域错误而中断的问题，增加真实绘图回归检查，并启用公开GitHub Pages访问。[托管与搜索说明](docs/网页托管.md)
 
 第三方许可统一存放于 [`licenses/`](licenses/)，来源见 [第三方资源说明](docs/第三方资源.md)。本次未新增项目整体的开源许可证。
+
+当前版增加顶部 Summer Ghost 音乐控件（网易云公开外链，需联网，未包含音频文件）。开场等待点击进入，并在点击时启动音乐；浏览器拦截时点击播放，外链不可用时可跳转网易云。移除动态背景开关，背景默认常驻，保留系统减少动态偏好。v3.11.0 动效改动一并纳入。

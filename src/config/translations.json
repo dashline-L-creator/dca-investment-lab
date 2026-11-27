@@ -172,7 +172,7 @@
   "旧版冻结保存；本版v3.1增加收益点阵和收益门槛扫描仪，保留全部样本和计算口径。": "Earlier releases are archived. Version 3.1 adds a real-sample return swarm and threshold scanner. All observations and calculation rules are preserved.",
   "重播开场": "Replay opening",
   "定投实验室开场": "DCA Lab opening",
-  "跳过开场 ↗": "Skip opening ↗",
+  "进入主页 ↗": "Enter the lab ↗",
   "每天50元，连续5年。": "RMB 50 each trading day. Five years.",
   "旧版冻结保存；本版v3.3.1增加收益点阵和收益门槛扫描仪，保留全部样本和计算口径。": "Earlier releases are archived. Version 3.2 adds an original brand icon and a short opening transition. All data and calculation rules are preserved.",
   "旧版冻结保存；本版v3.3.1增加专属图标和开场过渡，保留全部样本和计算口径。": "Earlier releases are archived. Version 3.2 adds an original brand icon and a short opening transition. All data and calculation rules are preserved.",
@@ -264,5 +264,17 @@
   "四资产立体直方图：累计收益率、资产名称、样本比例；方向键旋转，加减键缩放，Home复位": "Four-asset histogram: cumulative return, asset names and sample percentage. Arrow keys rotate, +/- zoom, Home resets.",
   "六个市场，最近一个交易日。": "Six markets. Their latest trading sessions.",
   "点击任意位置进入": "Click anywhere to enter",
-  "指数涨跌幅以前收盘价为基准，纽约金以前结算价为基准。指数时间按各市场当地时间，纽约金分时按北京时间展示，跨日以+1标记。休市显示最近交易日。数据来源：腾讯、东方财富公开行情。": "Indices use the previous close; COMEX Gold uses the previous settlement. Index times are local; gold intraday times are Beijing time, with +1 for the next day. Closed markets show the latest session. Sources: Tencent and Eastmoney public quotes."
+  "指数涨跌幅以前收盘价为基准，纽约金以前结算价为基准。指数时间按各市场当地时间，纽约金分时按北京时间展示，跨日以+1标记。休市显示最近交易日。数据来源：腾讯、东方财富公开行情。": "Indices use the previous close; COMEX Gold uses the previous settlement. Index times are local; gold intraday times are Beijing time, with +1 for the next day. Closed markets show the latest session. Sources: Tencent and Eastmoney public quotes.",
+  "四个资产，同一段时间": "Four assets. One timeline.",
+  "按收益排序 ↗": "Sort by return ↗",
+  "恢复资产顺序 ↗": "Asset order ↗",
+  "时间轴": "Time axis",
+  "▶ 播放音乐": "▶ Play music",
+  "Ⅱ 音乐": "Ⅱ Music",
+  "音乐：加载中": "Music: loading",
+  "↻ 重试音乐": "↻ Retry music",
+  "点击开启音乐": "Click to enable music",
+  "音源暂不可用，可前往网易云收听": "Audio unavailable; listen on NetEase Music",
+  "音乐音量": "Music volume",
+  "在网易云收听 Summer Ghost": "Listen to Summer Ghost on NetEase Music"
 }
